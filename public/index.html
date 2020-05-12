@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/bundle.js"></script>
+    <title>Currency</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <h1>Currency Converter</h1>
+            <h2>Select Currency</h2>
+
+        <ul>
+            <li v-for="(rate, currency) in currency.rates">
+                {{ rate }}, {{currency}}
+            </li>
+        </ul>
+
+            <!-- <label for="currency_select">Select a Currency:</label>
+            <select id="currency_select" v-model="selectedCurrency">
+              <option disabled value="">Select a currency</option>
+              <option v-for="(currency in currency" :value="currency">  </option>
+            </select> -->
+
+
+        </div>
+</body>
+</html>
