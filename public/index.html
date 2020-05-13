@@ -13,17 +13,21 @@
         <h1>Currency Converter</h1>
             <h2>Select Currency</h2>
 
+            <label for="currency_selecter">Select a Currency:</label>
+            <select id="currency_selecter" v-model="selectedCurrency">
+              <option v-for="(rate, currency) in currency.rates" :value="currency"> {{rate}} </option>
+              <button v-if="!favouriteCountries.includes(selectedCountry)" v-on:click="selectedCurrency">Select Currency</button>
+
+
+            </select>
+
         <ul>
             <li v-for="(rate, currency) in currency.rates">
                 {{ rate }}, {{currency}}
             </li>
         </ul>
 
-            <!-- <label for="currency_select">Select a Currency:</label>
-            <select id="currency_select" v-model="selectedCurrency">
-              <option disabled value="">Select a currency</option>
-              <option v-for="(currency in currency" :value="currency">  </option>
-            </select> -->
+           
 
 
         </div>
