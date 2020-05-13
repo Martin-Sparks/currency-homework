@@ -16,20 +16,15 @@
             <label for="currency_selecter">Select a Currency:</label>
             <select id="currency_selecter" v-model="selectedCurrency">
               <option v-for="(rate, currency) in currency.rates" :value="currency"> {{rate}} </option>
-              <button v-if="!favouriteCountries.includes(selectedCountry)" v-on:click="selectedCurrency">Select Currency</button>
-
-
+              <div>
+              <button v-on:click="addToCurrency">Select Currency</button>
+            </div>
             </select>
-
         <ul>
             <li v-for="(rate, currency) in currency.rates">
                 {{ rate }}, {{currency}}
             </li>
         </ul>
-
-           
-
-
         </div>
 </body>
 </html>
