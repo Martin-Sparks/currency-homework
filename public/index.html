@@ -17,7 +17,13 @@
             <select id="currency_selecter" v-model="selectedCurrency">
               <option v-for="(rate, currency) in currency.rates" :value="currency"> {{rate}} </option>
               <div>
-              <button v-on:click="addToCurrency">Select Currency</button>
+                  <br>
+
+              <button v-on:click="addToCurrency">Select Currency One</button>
+            </div>
+            </select>
+              <div>
+              <button v-on:click="addToCurrency2">Select Currency TWo</button>
             </div>
             </select>
         <ul>

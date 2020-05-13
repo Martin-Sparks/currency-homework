@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     el: "#app",
         data:{
             currency:{},
-            selectedCurrency: []
+            selectedCurrency: [],
+            selectedCurrency2: []
+            
         }, 
 
         methods:{
@@ -15,9 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(data => this.currency = data)
             },
 
-            addToCurrency: function(){
+            addToCurrency1: function(){
                 this.selectedCurrency.push(this.selectedCurrency)
               },
+
+            addToCurrency2: function(){
+                this.selectedCurrency2.push(this.selectedCurrency2)
+              }
         },
     mounted(){
         this.getCurrency()
